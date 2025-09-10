@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import SidebarNavigation from "./SidebarNavigation";
 import ThemeToggle from "./ThemeToggle";
+import Button from "@/common/ui/Button";
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Highlighter } from "@/components/ui/highlighter";
+import { Highlighter } from "@/common/ui/Highlighter";
 
 export default function Logo() {
   return (

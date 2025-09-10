@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { PropsWithChildren } from "react";
-import { Header } from "@/components/Header";
+import { Header } from "@/app/components/Header";
+import { Providers } from "@/common/providers";
+import { Toaster } from "@/common/ui/Sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,17 +19,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <html lang="en" suppressHydrationWarning>
         <head />
         <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          <Providers
           >
             <div className="relative flex min-h-screen flex-col overflow-hidden ">
               <Header />
               <main className="grow">{children}</main>
+              <Toaster />
             </div>
-          </ThemeProvider>
+          </Providers>
         </body>
       </html>
     </>
